@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Médiathèque - Articles{% endblock %}
+
+{% block body %}
+<div class="header">
+    <h1>MEDIATHEQUE</h1>
+    <div>
+        <h3><a>Mon compte</a></h3>
+        <h3><a>Panier</a></h3>
+        <h3><a href="{{ path('app_logout') }}">Me déconnecter</a></h3>
+    </div>
+</div>
+<div class="products-list">
+        {% for product in products %}
+            <div class="product">
+                <p>"{{ product.name }}"</p>
+                <img src="{{ asset('img/article.png') }}" alt="Article" />
+                <p>{{ product.quantity }} exemplaire(s) disponible(s)</p>
+                <button>Ajouter au panier</button>
+            </div>
+        {% else %}
+            <h2>Aucun produit disponible.<h2>
+        {% endfor %}
+</div>
+{% endblock %}
+{% block stylesheets %}
+
+    {{ encore_entry_link_tags('app') }}
+
+{% endblock %}

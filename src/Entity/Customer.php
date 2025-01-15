@@ -30,6 +30,9 @@ class Customer
     #[ORM\OneToMany(targetEntity: Meeting::class, mappedBy: 'customer', orphanRemoval: true)]
     private Collection $meetings;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?User $username = null;
+
     public function __construct()
     {
         $this->products_currently_owned = new ArrayCollection();
@@ -103,6 +106,18 @@ class Customer
                 $meeting->setCustomer(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUsername(): ?User
+    {
+        return $this->username;
+    }
+
+    public function setUsername(?User $username): static
+    {
+        $this->username = $username;
 
         return $this;
     }
