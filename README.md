@@ -6,6 +6,7 @@ Site web d'une médiathèque, qui souhaite gérer la prise de rendez-vous pour e
 ## Fonctionnalités :
 - Connexion/Déconnexion
 - Restriction d'accès pour utilisateurs non connectés
+- Système de panier
 - Création de rendez-vous
 - Gestion automatique de rappel de rendu des articles possédés
 - Prise de rdv sur 7 jours uniquement pour ne pas monopoliser un article
@@ -25,3 +26,4 @@ Site web d'une médiathèque, qui souhaite gérer la prise de rendez-vous pour e
 - Application Full-Stack Symfony : Front-End en Twig, et Symfony pour le Back-End
 - Système de connexion : Utilisation de l'authentification par user de Symfony
 - Système de réservation et de récupération de la date/heure courante
+- Système de panier : Utilisation des services
