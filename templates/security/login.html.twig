@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_login.html.twig' %}
 
 {% block title %}Se connecter{% endblock %}
 
@@ -21,11 +21,11 @@
             <label for="password" class="loginForm">Mot de passe</label>
             <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
 
-            <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}"
-            >
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-            <input type="hidden" name="app_store" value="{{ path('app_store') }}"/>
+            <!-- Si l'utilisateur est déjà connecté, on redirige vers app_store après la connexion -->
+            <input type="hidden" name="_target_path" value="{{ path('app_store') }}"/>
+
             <button class="loginButton" type="submit">
                 Se connecter
             </button>

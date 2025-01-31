@@ -61,7 +61,7 @@ body {
     margin-right:30px;
 }
 .header h3{
-    margin-right:10px;
+    margin-right:20px;
 }
 .header a{
     color:white;
@@ -110,4 +110,88 @@ body {
     transition: 0.25s;
     background-color: #364242;
     cursor:pointer;
+}
+
+.add_to_cart{
+    text-decoration: none;
+    border:solid 1px white;
+    padding:5px 10px;
+    border-radius:5px;
+    color:white;
+}
+
+.add_to_cart:hover{
+    color:black;
+    background-color: white;
+}
+
+/* ACCOUNT PAGE */
+
+.account_infos{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    color:white;
+}
+
+.meeting{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px white solid;
+}
+
+/* CART PAGE */
+
+.cart_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+}
+
+.cart_list{
+    border:solid 1px white;
+    margin-bottom:20px;
+}
+
+.cart_list td{
+    border:solid 1px white;
+    padding:5px;
+}
+
+.delete_item{
+    color:yellow;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+
+.delete_item:hover{
+    color:red;
+}
+
+.validation_command{
+    display:flex;
+    flex-direction: column;
+    margin-top:20px;
+}
+
+.calendar{
+    margin: 20px 0;
+}
+
+.validate_button{
+    background: none;
+    color: inherit;
+    border: solid 1px white;
+    padding: 20px;
+    border-radius: 5px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.validate_button:hover{
+    color:red;
+    border: solid 1px red;
 }
